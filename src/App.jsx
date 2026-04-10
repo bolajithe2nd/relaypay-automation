@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import relayPayLogo from './assets/relaypay-logo.png';
+import ThemeToggle from './components/ThemeToggle.jsx';
 import { useVapi } from './hooks/useVapi';
 
 const ISSUE_OPTIONS = [
@@ -16,7 +17,8 @@ const ISSUE_OPTIONS = [
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function App() {
-  const { isCallActive, isSpeaking, isMuted, status, error, startCall, endCall, toggleMute } = useVapi();
+  const { isCallActive, isSpeaking, isMuted, status, error, startCall, endCall, toggleMute } =
+    useVapi();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -81,12 +83,14 @@ function App() {
   const handleStartCall = async () => {
     if (!validate()) return;
     setIsSubmitting(true);
-    setSessionOpen(true);
-    await startCall({
+    const started = await startCall({
       customer_name: formData.fullName.trim(),
       customer_email: formData.email.trim(),
       issue_type: formData.issueType
     });
+    if (started) {
+      setSessionOpen(true);
+    }
     setIsSubmitting(false);
   };
 
@@ -109,6 +113,7 @@ function App() {
           
         </div>
         <div className="nav-right">
+          <ThemeToggle />
           <span className="nav-link">Help centre</span>
           <div className="status-pill">
             <div className="status-dot" />
@@ -123,7 +128,7 @@ function App() {
           Cross-border payments,
           <br />
           <strong>
-            <span className="blue">answered</span> instantly.
+            <span className="accent">answered</span> instantly.
           </strong>
         </h1>
         <p className="hero-sub">
@@ -281,6 +286,7 @@ function App() {
             </div>
           ) : (
             <div className="call-controls show">
+              {error ? <div className="err show">{error}</div> : null}
               <button className="cbtn" type="button" onClick={toggleMute}>
                 {isMuted ? 'Unmute' : 'Mute'}
               </button>

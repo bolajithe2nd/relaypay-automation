@@ -57,15 +57,15 @@ export default function PreCallForm({ onStartCall, error, status }) {
 
   return (
     <section className="grid gap-6 lg:grid-cols-5">
-      <div className="rounded-2xl border border-slate-800 bg-[#0b1220] p-6 lg:col-span-3">
-        <h1 className="text-2xl font-semibold text-white">Speak with RelayPay Support</h1>
-        <p className="mt-2 text-sm text-slate-300">
+      <div className="rounded-2xl border border-[color:var(--border-subtle)] bg-[color:var(--surface-raised)] p-6 lg:col-span-3">
+        <h1 className="ui-text-heading text-2xl font-semibold">Speak with RelayPay Support</h1>
+        <p className="ui-text-secondary mt-2 text-sm">
           Share your details before starting a secure support call with our payments team.
         </p>
 
         <form className="mt-6 space-y-4" onSubmit={handleSubmit} noValidate>
           <div>
-            <label htmlFor="fullName" className="mb-2 block text-sm text-slate-300">
+            <label htmlFor="fullName" className="ui-text-label mb-2 block text-sm">
               Full Name
             </label>
             <input
@@ -73,7 +73,7 @@ export default function PreCallForm({ onStartCall, error, status }) {
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              className="w-full rounded-xl border border-slate-700 bg-[#050913] px-4 py-3 text-slate-100 outline-none ring-0 placeholder:text-slate-500 focus:border-[#1e3a8a]"
+              className="ui-text-heading w-full rounded-xl border border-[color:var(--border-subtle)] bg-[color:var(--surface-inset)] px-4 py-3 outline-none ring-0 placeholder:text-(--text-caption) focus:border-[#166534]"
               placeholder="Jane Doe"
             />
             {validationErrors.fullName ? (
@@ -82,7 +82,7 @@ export default function PreCallForm({ onStartCall, error, status }) {
           </div>
 
           <div>
-            <label htmlFor="email" className="mb-2 block text-sm text-slate-300">
+            <label htmlFor="email" className="ui-text-label mb-2 block text-sm">
               Email Address
             </label>
             <input
@@ -91,7 +91,7 @@ export default function PreCallForm({ onStartCall, error, status }) {
               type="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full rounded-xl border border-slate-700 bg-[#050913] px-4 py-3 text-slate-100 outline-none ring-0 placeholder:text-slate-500 focus:border-[#1e3a8a]"
+              className="ui-text-heading w-full rounded-xl border border-[color:var(--border-subtle)] bg-[color:var(--surface-inset)] px-4 py-3 outline-none ring-0 placeholder:text-(--text-caption) focus:border-[#166534]"
               placeholder="jane@company.com"
             />
             {validationErrors.email ? (
@@ -100,7 +100,7 @@ export default function PreCallForm({ onStartCall, error, status }) {
           </div>
 
           <div>
-            <label htmlFor="issueType" className="mb-2 block text-sm text-slate-300">
+            <label htmlFor="issueType" className="ui-text-label mb-2 block text-sm">
               Issue Type
             </label>
             <select
@@ -108,7 +108,7 @@ export default function PreCallForm({ onStartCall, error, status }) {
               name="issueType"
               value={formData.issueType}
               onChange={handleChange}
-              className="w-full rounded-xl border border-slate-700 bg-[#050913] px-4 py-3 text-slate-100 outline-none focus:border-[#0d9488]"
+              className="ui-text-heading w-full rounded-xl border border-[color:var(--border-subtle)] bg-[color:var(--surface-inset)] px-4 py-3 outline-none focus:border-[#22c55e]"
             >
               {ISSUE_TYPES.map((issueType) => (
                 <option key={issueType} value={issueType}>
@@ -121,29 +121,29 @@ export default function PreCallForm({ onStartCall, error, status }) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-xl bg-[#1e3a8a] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#1d4ed8] disabled:cursor-not-allowed disabled:opacity-60"
+            className="w-full rounded-xl bg-[#166534] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#15803d] disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSubmitting ? 'Starting call...' : 'Start Voice Support Call'}
           </button>
 
-          {status ? <p className="text-xs text-slate-400">Status: {status}</p> : null}
+          {status ? <p className="ui-text-muted text-xs">Status: {status}</p> : null}
           {error ? <p className="text-sm text-red-400">{error}</p> : null}
         </form>
       </div>
 
-      <aside className="rounded-2xl border border-slate-800 bg-[#0b1220] p-6 lg:col-span-2">
-        <h2 className="text-lg font-semibold text-white">What we can help with</h2>
-        <ul className="mt-4 space-y-2 text-sm text-slate-300">
+      <aside className="rounded-2xl border border-[color:var(--border-subtle)] bg-[color:var(--surface-raised)] p-6 lg:col-span-2">
+        <h2 className="ui-text-heading text-lg font-semibold">What we can help with</h2>
+        <ul className="ui-text-secondary mt-4 space-y-2 text-sm">
           {ISSUE_TYPES.map((item) => (
-            <li key={item} className="rounded-lg border border-slate-700 bg-[#050913] px-3 py-2">
+            <li key={item} className="rounded-lg border border-[color:var(--border-subtle)] bg-[color:var(--surface-inset)] px-3 py-2">
               {item}
             </li>
           ))}
         </ul>
 
-        <div className="mt-6 rounded-lg border border-slate-700 bg-[#050913] p-4">
-          <p className="text-sm font-medium text-slate-200">Support hours</p>
-          <p className="mt-1 text-sm text-slate-300">Monday to Friday, 9 AM to 5 PM West Africa Time</p>
+        <div className="mt-6 rounded-lg border border-[color:var(--border-subtle)] bg-[color:var(--surface-inset)] p-4">
+          <p className="ui-text-body text-sm font-medium">Support hours</p>
+          <p className="ui-text-secondary mt-1 text-sm">Monday to Friday, 9 AM to 5 PM West Africa Time</p>
         </div>
       </aside>
     </section>

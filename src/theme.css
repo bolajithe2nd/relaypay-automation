@@ -1,0 +1,129 @@
+/* Theme tokens: html[data-theme] set by ThemeProvider + inline script in index.html */
+
+html[data-theme="dark"] {
+  --surface-page: #070b09;
+  --surface-raised: #0a100d;
+  --surface-inset: #060a08;
+  --border-subtle: #161e1a;
+  --border-divider: #101816;
+
+  --text-body: #ccd6d0;
+  --text-heading: #eef2f0;
+  --text-secondary: #9aada3;
+  --text-muted: #6b7f72;
+  --text-subtle: #556a60;
+  --text-label: #5a6e62;
+  --text-caption: #4a5e54;
+
+  --accent-bright: #4ade80;
+  --accent-primary: #22c55e;
+  --hero-tag-fg: #3acd8a;
+  --hero-tag-border: #1a4a3a;
+
+  --dots-pattern: #1a2e24;
+  --glow-mist: #0a2818;
+
+  --status-pill-bg: #051a0f;
+  --status-pill-border: #0a3a1a;
+
+  --ring-1: #101816;
+  --ring-2: #141c18;
+  --ring-3: #1a3a30;
+  --ring-4: #2a6a4a;
+
+  --vis-core-bg: #0c1814;
+  --vis-core-border: #2a6a50;
+  --vis-icon-stroke: #4ade80;
+
+  --vb-2: #1a3a28;
+  --vb-3: #2a6a44;
+  --vb-4: #3acd7a;
+  --vb-5: #4ade80;
+
+  --call-status-completed: #dcfce7;
+  --caller-chip-bg: #0c100e;
+  --caller-chip-completed-bg: #0b1a14;
+  --caller-chip-completed-border: #1d3f2f;
+  --caller-chip-completed-fg: #6fc4a8;
+
+  --btn-connect-bg: #14532d;
+  --btn-connect-border: #22c55e;
+  --btn-connect-fg: #bbf7d0;
+  --btn-connect-hover-bg: #166534;
+  --btn-connect-hover-border: #4ade80;
+  --btn-connect-hover-fg: #ecfdf5;
+
+  --cbtn-hover-border: #1e3a2a;
+  --cbtn-hover-fg: #5aaa7a;
+
+  --chip-dot: #4ade80;
+  --focus-ring: #22c55e;
+
+  --err-fg: #8a3a3a;
+  --danger-hover-border: #3a1515;
+  --danger-hover-fg: #8a3a3a;
+}
+
+html[data-theme="light"] {
+  --surface-page: #f5f8f6;
+  --surface-raised: #ffffff;
+  --surface-inset: #f0f4f2;
+  --border-subtle: #d1e0d8;
+  --border-divider: #e2ebe6;
+
+  --text-body: #243029;
+  --text-heading: #0f1714;
+  --text-secondary: #4a5e54;
+  --text-muted: #5c7268;
+  --text-subtle: #6b8076;
+  --text-label: #3d5248;
+  --text-caption: #556a60;
+
+  --accent-bright: #16a34a;
+  --accent-primary: #15803d;
+  --hero-tag-fg: #15803d;
+  --hero-tag-border: #bbf7d0;
+
+  --dots-pattern: #c4ddd0;
+  --glow-mist: #c8e8d8;
+
+  --status-pill-bg: #ecfdf5;
+  --status-pill-border: #bbf7d0;
+
+  --ring-1: #d1e0d8;
+  --ring-2: #c8d9cf;
+  --ring-3: #a7d4bc;
+  --ring-4: #4ade80;
+
+  --vis-core-bg: #f0fdf4;
+  --vis-core-border: #86efac;
+  --vis-icon-stroke: #16a34a;
+
+  --vb-2: #bbf7d0;
+  --vb-3: #86efac;
+  --vb-4: #4ade80;
+  --vb-5: #22c55e;
+
+  --call-status-completed: #14532d;
+  --caller-chip-bg: #f0f4f2;
+  --caller-chip-completed-bg: #ecfdf5;
+  --caller-chip-completed-border: #bbf7d0;
+  --caller-chip-completed-fg: #166534;
+
+  --btn-connect-bg: #15803d;
+  --btn-connect-border: #16a34a;
+  --btn-connect-fg: #ecfdf5;
+  --btn-connect-hover-bg: #166534;
+  --btn-connect-hover-border: #22c55e;
+  --btn-connect-hover-fg: #ffffff;
+
+  --cbtn-hover-border: #86efac;
+  --cbtn-hover-fg: #166534;
+
+  --chip-dot: #22c55e;
+  --focus-ring: #16a34a;
+
+  --err-fg: #b91c1c;
+  --danger-hover-border: #fecaca;
+  --danger-hover-fg: #b91c1c;
+}
